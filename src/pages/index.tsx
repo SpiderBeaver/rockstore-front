@@ -5,6 +5,8 @@ import { GetServerSideProps } from 'next';
 import { fetchProducts } from '../api/fetchProducts';
 import { Product } from '../domain/Product';
 import ProductsList from '../components/ProductsList';
+import Header from '../components/Header';
+import Container from '../components/Container';
 
 interface HomeProps {
   products: Product[];
@@ -21,17 +23,19 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async (context)
 
 export default function Home({ products }: HomeProps) {
   return (
-    <div className={styles.container}>
+    <div className={styles.page}>
       <Head>
         <title>RockStore</title>
         <meta name="description" content="RockStore" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Rockstore</h1>
+      <Header></Header>
 
-      <h2>Ready to shop?</h2>
-      <ProductsList products={products}></ProductsList>
+      <Container>
+        <h2>Ready to shop?</h2>
+        <ProductsList products={products}></ProductsList>
+      </Container>
     </div>
   );
 }
