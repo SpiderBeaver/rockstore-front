@@ -1,0 +1,38 @@
+.featuresSection {
+  margin-bottom: 60px;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.feature {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconContainer {
+  background-color: #f5917e;
+  border-radius: 30px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon {
+  color: #ffffff;
+  font-size: 80px;
+}
+
+.featureText {
+  font-size: 1.4em;
+  font-weight: 500;
+  text-align: center;
+}
