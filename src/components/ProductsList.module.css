@@ -1,6 +1,23 @@
 .productsList {
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .productsListItem {
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+.productImageContainer {
+  width: 100%;
+  display: block;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  margin-bottom: 10px;
+}
+
+.productName {
+  font-size: 1.1em;
 }

@@ -29,6 +29,8 @@ export default function Home({ products }: HomeProps) {
       </Head>
 
       <h1>Rockstore</h1>
+
+      <h2>Ready to shop?</h2>
       <ProductsList products={products}></ProductsList>
     </div>
   );
