@@ -1,9 +1,25 @@
 import Head from 'next/head';
 import React from 'react';
-import Header from '../components/Header';
-import styles from '../../styles/Home.module.css';
+import styles from './index.module.css';
+import { GetServerSideProps } from 'next';
+import { fetchProducts } from '../api/fetchProducts';
+import { Product } from '../domain/Product';
+import ProductsList from '../components/ProductsList';
 
-export default function Home() {
+interface HomeProps {
+  products: Product[];
+}
+
+export const getServerSideProps: GetServerSideProps<HomeProps> = async (context) => {
+  const products = await fetchProducts();
+  return {
+    props: {
+      products: products,
+    },
+  };
+};
+
+export default function Home({ products }: HomeProps) {
   return (
     <div className={styles.container}>
       <Head>
@@ -12,8 +28,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header></Header>
       <h1>Rockstore</h1>
+      <ProductsList products={products}></ProductsList>
     </div>
   );
 }
