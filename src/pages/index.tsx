@@ -10,6 +10,7 @@ import Container from '../components/Container';
 import HeroSection from '../components/HeroSection';
 import IntroductionSection from '../components/IntroductionSection';
 import FeaturesSection from '../components/FeaturesSection';
+import Footer from '../components/Footer';
 
 interface HomeProps {
   products: Product[];
@@ -42,6 +43,8 @@ export default function HomePage({ products }: HomeProps) {
         <h2>Ready to shop?</h2>
         <ProductsList products={products}></ProductsList>
       </Container>
+
+      <Footer></Footer>
     </div>
   );
 }
