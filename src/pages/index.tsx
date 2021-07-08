@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import styles from './index.module.css';
 import { GetServerSideProps } from 'next';
-import { fetchProducts } from '../api/fetchProducts';
+import { fetchProducts } from '../api/api';
 import { Product } from '../domain/Product';
 import ProductsList from '../components/ProductsList';
 import Header from '../components/Header';
