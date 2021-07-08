@@ -24,7 +24,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async (context)
   };
 };
 
-export default function Home({ products }: HomeProps) {
+export default function HomePage({ products }: HomeProps) {
   return (
     <div className={styles.page}>
       <Head>

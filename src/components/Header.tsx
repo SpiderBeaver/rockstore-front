@@ -17,8 +17,12 @@ export default function Header() {
             <Link href="/">RockStore</Link>
           </h1>
           <div className={styles.cart}>
-            <span>{cartContext.items.map((item) => item.count).reduce((a, b) => a + b, 0)}</span>
-            <FontAwesomeIcon icon={faShoppingCart} className={styles.cartIcon}></FontAwesomeIcon>
+            <Link href="/cart">
+              <a>
+                <span>{cartContext.items.map((item) => item.count).reduce((a, b) => a + b, 0)}</span>
+                <FontAwesomeIcon icon={faShoppingCart} className={styles.cartIcon}></FontAwesomeIcon>
+              </a>
+            </Link>
           </div>
         </div>
       </Container>
