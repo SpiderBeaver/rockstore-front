@@ -12,3 +12,21 @@ export async function fetchProduct(id: number): Promise<Product> {
   const response = await axios.get<Product>(`${apiBaseUrl}/products/${id}`);
   return response.data;
 }
+
+export interface CreateOrderParams {
+  order: {
+    products: {
+      id: number;
+      count: number;
+    }[];
+    client: {
+      name: string;
+      email: string;
+      phoneNumber: string;
+      address: string;
+    };
+  };
+}
+export async function createOrder(params: CreateOrderParams) {
+  await axios.post(`${apiBaseUrl}/orders`, params.order);
+}

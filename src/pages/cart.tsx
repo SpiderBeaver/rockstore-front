@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useContext } from 'react';
 import { useQueries } from 'react-query';
 import { fetchProduct } from '../api/api';
@@ -39,7 +40,9 @@ export default function CartPage() {
         <h1>My Cart</h1>
         {productsWithCounts && <CartItemsTable items={productsWithCounts}></CartItemsTable>}
         <div>{totalPrice && <span>Total: ${totalPrice.toFixed(2)}</span>}</div>
-        <a href="#">Proceed to Checkout</a>
+        <Link href="/checkout">
+          <a>Proceed to Checkout</a>
+        </Link>
       </Container>
     </div>
   );
