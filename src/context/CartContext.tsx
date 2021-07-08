@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 interface CartItem {
   productId: number;
@@ -15,6 +15,14 @@ export const CartContext = createContext<Cart>({ items: [], addProduct: (id) => 
 export function CartContextProvider({ children }: React.PropsWithChildren<{}>) {
   const [items, setItems] = useState<CartItem[]>([]);
 
+  useEffect(() => {
+    const localStoredItemsString = localStorage.getItem('cart');
+    if (localStoredItemsString) {
+      const localStoredItems = JSON.parse(localStoredItemsString);
+      setItems(localStoredItems);
+    }
+  }, []);
+
   const contextValue: Cart = {
     items: items,
     addProduct: (id) => {
@@ -23,9 +31,12 @@ export function CartContextProvider({ children }: React.PropsWithChildren<{}>) {
         if (item) {
           const newItem: CartItem = { ...item, count: item.count + 1 };
           const newItems = [...oldItems.filter((i) => i.productId !== id), newItem];
+          localStorage.setItem('cart', JSON.stringify(newItems));
           return newItems;
         } else {
-          return [...oldItems, { productId: id, count: 1 }];
+          const newItems = [...oldItems, { productId: id, count: 1 }];
+          localStorage.setItem('cart', JSON.stringify(newItems));
+          return newItems;
         }
       });
     },
