@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 import Container from './Container';
 import styles from './Header.module.css';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 export default function Header() {
+  const cartContext = useContext(CartContext);
+
   return (
     <header className={styles.header}>
       <Container>
-        <h1 className={styles.logo}>RockStore</h1>
+        <div className={styles.content}>
+          <h1 className={styles.logo}>
+            <Link href="/">RockStore</Link>
+          </h1>
+          <div className={styles.cart}>
+            <span>{cartContext.items.map((item) => item.count).reduce((a, b) => a + b, 0)}</span>
+            <FontAwesomeIcon icon={faShoppingCart} className={styles.cartIcon}></FontAwesomeIcon>
+          </div>
+        </div>
       </Container>
     </header>
   );

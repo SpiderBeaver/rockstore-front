@@ -3,8 +3,22 @@
   color: #ffffff;
 }
 
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo {
   color: #a89d81;
   font-size: 1.3em;
   font-weight: 400;
+}
+
+.cart {
+  color: #a89d81;
+}
+
+.cartIcon {
+  margin-left: 5px;
 }

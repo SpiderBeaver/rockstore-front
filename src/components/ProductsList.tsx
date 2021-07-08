@@ -2,6 +2,7 @@ import React from 'react';
 import { Product } from '../domain/Product';
 import styles from './ProductsList.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export interface ProductsListProps {
   products: Product[];
@@ -21,7 +22,9 @@ export default function ProductsList({ products }: ProductsListProps) {
               layout="responsive"
             ></Image>
           </div>
-          <span className={styles.productName}>{product.name}</span>
+          <Link href={`/products/${product.id}`}>
+            <a className={styles.productName}>{product.name}</a>
+          </Link>
         </li>
       ))}
     </ul>
