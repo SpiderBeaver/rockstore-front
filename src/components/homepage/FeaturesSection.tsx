@@ -2,11 +2,12 @@ import { faDollarSign, faExpandAlt, faSmile } from '@fortawesome/free-solid-svg-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styles from './FeaturesSection.module.css';
+import SectionHeading from './SectionHeading';
 
 export default function FeaturesSection() {
   return (
     <div className={styles.featuresSection}>
-      <h2>Features</h2>
+      <SectionHeading>Features</SectionHeading>
       <ul className={styles.featuresList}>
         <li className={styles.feature}>
           <div className={styles.iconContainer}>

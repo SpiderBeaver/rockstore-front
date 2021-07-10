@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './IntroductionSection.module.css';
+import SectionHeading from './SectionHeading';
 
 export default function IntroductionSection() {
   return (
     <div className={styles.introductionSection}>
-      <h2>The best rocks on Earth</h2>
+      <SectionHeading>The best rocks on Earth</SectionHeading>
       <p>
         Over the years we collected the best rocks humanity ever found. Lorem ipsum dolor sit amet, consectetur
         adipiscing elit. Duis augue sem, aliquam sit amet felis vestibulum, pulvinar venenatis sem. Phasellus hendrerit,

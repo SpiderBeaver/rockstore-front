@@ -11,6 +11,7 @@ import HeroSection from '../components/homepage/HeroSection';
 import IntroductionSection from '../components/homepage/IntroductionSection';
 import FeaturesSection from '../components/homepage/FeaturesSection';
 import Footer from '../components/layout/Footer';
+import ProductsSection from '../components/homepage/ProductsSection';
 
 interface HomeProps {
   products: Product[];
@@ -40,8 +41,7 @@ export default function HomePage({ products }: HomeProps) {
       <Container>
         <IntroductionSection></IntroductionSection>
         <FeaturesSection></FeaturesSection>
-        <h2>Ready to shop?</h2>
-        <ProductsList products={products}></ProductsList>
+        <ProductsSection products={products}></ProductsSection>
       </Container>
 
       <Footer></Footer>
