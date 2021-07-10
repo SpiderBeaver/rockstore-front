@@ -11,6 +11,10 @@
   margin-bottom: 50px;
 }
 
+.productCard:hover .productImageContainer {
+  box-shadow: rgba(50, 50, 105, 0.15) 3px 5px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+
 .productImageContainer {
   width: 100%;
   display: block;
