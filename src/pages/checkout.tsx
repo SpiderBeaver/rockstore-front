@@ -6,6 +6,7 @@ import Header from '../components/layout/Header';
 import TextInput from '../components/elements/TextInput';
 import { CartContext } from '../context/CartContext';
 import styles from './checkout.module.css';
+import Footer from '../components/layout/Footer';
 
 export default function Checkout() {
   const cartContext = useContext(CartContext);
@@ -71,6 +72,7 @@ export default function Checkout() {
           <input type="submit" value="Checkout"></input>
         </form>
       </Container>
+      <Footer></Footer>
     </div>
   );
 }

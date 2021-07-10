@@ -2,6 +2,7 @@ import { GetServerSideProps } from 'next';
 import React from 'react';
 import { fetchProduct } from '../../api/api';
 import Container from '../../components/layout/Container';
+import Footer from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
 import Product from '../../components/product/Product';
 import { Product as ProductModel } from '../../domain/Product';
@@ -29,6 +30,8 @@ export default function ProductPage({ product }: ProductProps) {
       <Container>
         <Product product={product}></Product>
       </Container>
+
+      <Footer></Footer>
     </div>
   );
 }

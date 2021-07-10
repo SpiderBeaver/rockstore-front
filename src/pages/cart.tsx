@@ -4,6 +4,7 @@ import { useQueries } from 'react-query';
 import { fetchProduct } from '../api/api';
 import CartItemsTable from '../components/cart/CartItemsTable';
 import Container from '../components/layout/Container';
+import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
 import { CartContext } from '../context/CartContext';
 import { Product } from '../domain/Product';
@@ -44,6 +45,7 @@ export default function CartPage() {
           <a>Proceed to Checkout</a>
         </Link>
       </Container>
+      <Footer></Footer>
     </div>
   );
 }
