@@ -22,9 +22,12 @@ export default function ProductsList({ products }: ProductsListProps) {
               layout="responsive"
             ></Image>
           </div>
-          <Link href={`/products/${product.id}`}>
-            <a className={styles.productName}>{product.name}</a>
-          </Link>
+          <div className={styles.productDetails}>
+            <Link href={`/products/${product.id}`}>
+              <a className={styles.productName}>{product.name}</a>
+            </Link>
+            <span className={styles.price}>${product.price.toFixed(2)}</span>
+          </div>
         </li>
       ))}
     </ul>

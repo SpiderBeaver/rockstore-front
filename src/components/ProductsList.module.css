@@ -18,6 +18,16 @@
   margin-bottom: 10px;
 }
 
+.productDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .productName {
   font-size: 1.1em;
+}
+
+.price {
+  font-weight: 500;
 }
