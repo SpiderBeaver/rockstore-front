@@ -8,7 +8,7 @@ export interface ProductsSectionProps {
 }
 export default function ProductsSection({ products }: ProductsSectionProps) {
   return (
-    <div>
+    <div id="ProductsSection">
       <SectionHeading>Ready to shop?</SectionHeading>
       <ProductsList products={products}></ProductsList>
     </div>

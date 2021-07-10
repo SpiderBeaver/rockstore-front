@@ -8,7 +8,7 @@ export default function HeroSection() {
     <div className={styles.heroSection}>
       <Container>
         <span className={styles.slogan}>These stones will rock your world</span>
-        <a href="#">
+        <a href="#ProductsSection">
           <ActionButton variant="big">Start shopping</ActionButton>
         </a>
       </Container>
