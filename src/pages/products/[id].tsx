@@ -1,9 +1,9 @@
 import { GetServerSideProps } from 'next';
 import React from 'react';
 import { fetchProduct } from '../../api/api';
-import Container from '../../components/Container';
-import Header from '../../components/Header';
-import Product from '../../components/Product';
+import Container from '../../components/layout/Container';
+import Header from '../../components/layout/Header';
+import Product from '../../components/product/Product';
 import { Product as ProductModel } from '../../domain/Product';
 import styles from './[id].module.css';
 

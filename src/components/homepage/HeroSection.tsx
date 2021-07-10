@@ -1,6 +1,6 @@
 import React from 'react';
-import ActionButton from './ActionButton';
-import Container from './Container';
+import ActionButton from '../elements/ActionButton';
+import Container from '../layout/Container';
 import styles from './HeroSection.module.css';
 
 export default function HeroSection() {

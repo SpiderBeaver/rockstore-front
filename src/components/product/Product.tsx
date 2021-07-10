@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import styles from './Product.module.css';
 import Image from 'next/image';
-import { Product as ProductModel } from '../domain/Product';
-import { CartContext } from '../context/CartContext';
-import ActionButton from './ActionButton';
+import { Product as ProductModel } from '../../domain/Product';
+import { CartContext } from '../../context/CartContext';
+import ActionButton from '../elements/ActionButton';
 
 export interface ProductProps {
   product: ProductModel;

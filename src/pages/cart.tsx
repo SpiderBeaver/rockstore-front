@@ -2,9 +2,9 @@ import Link from 'next/link';
 import React, { useContext } from 'react';
 import { useQueries } from 'react-query';
 import { fetchProduct } from '../api/api';
-import CartItemsTable from '../components/CartItemsTable';
-import Container from '../components/Container';
-import Header from '../components/Header';
+import CartItemsTable from '../components/cart/CartItemsTable';
+import Container from '../components/layout/Container';
+import Header from '../components/layout/Header';
 import { CartContext } from '../context/CartContext';
 import { Product } from '../domain/Product';
 

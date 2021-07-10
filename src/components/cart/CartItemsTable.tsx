@@ -1,5 +1,5 @@
 import React from 'react';
-import { Product } from '../domain/Product';
+import { Product } from '../../domain/Product';
 import styles from './CartItemsTable.module.css';
 
 interface CartItem {

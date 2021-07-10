@@ -1,9 +1,9 @@
 import { useRouter } from 'next/dist/client/router';
 import React, { useContext, useState } from 'react';
 import { createOrder, CreateOrderParams } from '../api/api';
-import Container from '../components/Container';
-import Header from '../components/Header';
-import TextInput from '../components/TextInput';
+import Container from '../components/layout/Container';
+import Header from '../components/layout/Header';
+import TextInput from '../components/elements/TextInput';
 import { CartContext } from '../context/CartContext';
 import styles from './checkout.module.css';
 

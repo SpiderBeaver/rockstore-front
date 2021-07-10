@@ -1,6 +1,6 @@
 .heroSection {
   height: 900px;
-  background-image: url('../../public/hero.jpg');
+  background-image: url('../../../public/hero.jpg');
   background-size: cover;
   background-position: bottom -60px right 0;
   color: #ffffff;

@@ -4,13 +4,13 @@ import styles from './index.module.css';
 import { GetServerSideProps } from 'next';
 import { fetchProducts } from '../api/api';
 import { Product } from '../domain/Product';
-import ProductsList from '../components/ProductsList';
-import Header from '../components/Header';
-import Container from '../components/Container';
-import HeroSection from '../components/HeroSection';
-import IntroductionSection from '../components/IntroductionSection';
-import FeaturesSection from '../components/FeaturesSection';
-import Footer from '../components/Footer';
+import ProductsList from '../components/product/ProductsList';
+import Header from '../components/layout/Header';
+import Container from '../components/layout/Container';
+import HeroSection from '../components/homepage/HeroSection';
+import IntroductionSection from '../components/homepage/IntroductionSection';
+import FeaturesSection from '../components/homepage/FeaturesSection';
+import Footer from '../components/layout/Footer';
 
 interface HomeProps {
   products: Product[];
