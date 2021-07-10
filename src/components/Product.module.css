@@ -15,14 +15,3 @@
   position: relative;
   height: 400px;
 }
-
-.actionButton {
-  background-color: #f95738;
-  color: #ffffff;
-  border-radius: 8px;
-  padding: 10px 15px;
-  font-size: 1.4em;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-}

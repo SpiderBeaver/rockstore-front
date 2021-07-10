@@ -3,6 +3,7 @@ import styles from './Product.module.css';
 import Image from 'next/image';
 import { Product as ProductModel } from '../domain/Product';
 import { CartContext } from '../context/CartContext';
+import ActionButton from './ActionButton';
 
 export interface ProductProps {
   product: ProductModel;
@@ -20,9 +21,7 @@ export default function Product({ product }: ProductProps) {
         <h1>{product.name}</h1>
         <span>${product.price.toFixed(2)}</span>
         <p>{product.description}</p>
-        <button className={styles.actionButton} onClick={handleAddToCart}>
-          Add to cart
-        </button>
+        <ActionButton onClick={handleAddToCart}>Add to cart</ActionButton>
       </div>
       <div className={styles.imageContainer}>
         <Image
