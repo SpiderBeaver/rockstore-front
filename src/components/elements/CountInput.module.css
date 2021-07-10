@@ -1,0 +1,43 @@
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.minus {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  text-align: center;
+  background-color: #f95738;
+  color: #ffffff;
+  font-size: 40px;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.value {
+  height: 40px;
+  line-height: 37px;
+  width: 40px;
+  text-align: center;
+  border: 3px solid #f95738;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.plus {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  text-align: center;
+  background-color: #f95738;
+  color: #ffffff;
+  font-size: 30px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  user-select: none;
+}

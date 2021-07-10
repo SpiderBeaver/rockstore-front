@@ -4,12 +4,18 @@ import Image from 'next/image';
 import { Product as ProductModel } from '../../domain/Product';
 import { CartContext } from '../../context/CartContext';
 import ActionButton from '../elements/ActionButton';
+import CountInput from '../elements/CountInput';
 
 export interface ProductProps {
   product: ProductModel;
 }
 export default function Product({ product }: ProductProps) {
   const cartContext = useContext(CartContext);
+  const cartItem = cartContext.items.find((item) => item.productId === product.id);
+
+  const handleCountChange = (newCount: number) => {
+    cartContext.setCount(product.id, newCount);
+  };
 
   const handleAddToCart = () => {
     cartContext.addProduct(product.id);
@@ -21,7 +27,11 @@ export default function Product({ product }: ProductProps) {
         <h1>{product.name}</h1>
         <span>${product.price.toFixed(2)}</span>
         <p>{product.description}</p>
-        <ActionButton onClick={handleAddToCart}>Add to cart</ActionButton>
+        {cartItem !== undefined ? (
+          <CountInput value={cartItem.count} onChange={handleCountChange}></CountInput>
+        ) : (
+          <ActionButton onClick={handleAddToCart}>Add to cart</ActionButton>
+        )}
       </div>
       <div className={styles.imageContainer}>
         <Image
