@@ -48,7 +48,7 @@ export default function TextInput(props: TextInputProps) {
         ' ' +
         (isFocused ? styles.containerFocused : '') +
         ' ' +
-        props.className
+        (props.className ?? '')
       }
       onClick={handleClick}
     >
