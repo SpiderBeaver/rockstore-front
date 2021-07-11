@@ -19,7 +19,7 @@ export default function CartItemsTable({ items }: CartItemsTableProps) {
           <th className={styles.headerCell}>Product</th>
           <th className={styles.headerCell}>Price</th>
           <th className={styles.headerCell}>Quantity</th>
-          <th className={styles.headerCell}>Total Price</th>
+          <th className={`${styles.headerCell} ${styles.lastCell}`}>Subtotal Price</th>
         </tr>
       </thead>
       <tbody>
@@ -30,7 +30,7 @@ export default function CartItemsTable({ items }: CartItemsTableProps) {
               <td className={styles.cell}>{item.product.name}</td>
               <td className={styles.cell}>${item.product.price.toFixed(2)}</td>
               <td className={styles.cell}>{item.count}</td>
-              <td className={styles.cell}>${(item.count * item.product.price).toFixed(2)}</td>
+              <td className={`${styles.cell} ${styles.lastCell}`}>${(item.count * item.product.price).toFixed(2)}</td>
             </tr>
           ))}
       </tbody>

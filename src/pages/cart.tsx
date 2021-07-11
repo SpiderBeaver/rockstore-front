@@ -3,12 +3,14 @@ import React, { useContext } from 'react';
 import { useQueries } from 'react-query';
 import { fetchProduct } from '../api/api';
 import CartItemsTable from '../components/cart/CartItemsTable';
+import ActionButton from '../components/elements/ActionButton';
 import Container from '../components/layout/Container';
 import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
 import Page from '../components/layout/Page';
 import { CartContext } from '../context/CartContext';
 import { Product } from '../domain/Product';
+import styles from './cart.module.css';
 
 export default function CartPage() {
   const cartContext = useContext(CartContext);
@@ -39,11 +41,15 @@ export default function CartPage() {
     <Page>
       <Header></Header>
       <Container>
-        <h1>My Cart</h1>
-        {productsWithCounts && <CartItemsTable items={productsWithCounts}></CartItemsTable>}
-        <div>{totalPrice && <span>Total: ${totalPrice.toFixed(2)}</span>}</div>
+        <h1 className={styles.heading}>My Cart</h1>
+        <div className={styles.itemsTableContainer}>
+          {productsWithCounts && <CartItemsTable items={productsWithCounts}></CartItemsTable>}
+        </div>
+        <div className={styles.total}>{totalPrice && <span>Total: ${totalPrice.toFixed(2)}</span>}</div>
         <Link href="/checkout">
-          <a>Proceed to Checkout</a>
+          <a className={styles.checkoutButton}>
+            <ActionButton>Proceed to Checkout</ActionButton>
+          </a>
         </Link>
       </Container>
       <Footer></Footer>
