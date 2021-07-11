@@ -4,9 +4,9 @@ import { fetchProduct } from '../../api/api';
 import Container from '../../components/layout/Container';
 import Footer from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
+import Page from '../../components/layout/Page';
 import Product from '../../components/product/Product';
 import { Product as ProductModel } from '../../domain/Product';
-import styles from './[id].module.css';
 
 interface ProductProps {
   product: ProductModel;
@@ -24,7 +24,7 @@ export const getServerSideProps: GetServerSideProps<ProductProps> = async (conte
 
 export default function ProductPage({ product }: ProductProps) {
   return (
-    <div className={styles.page}>
+    <Page>
       <Header></Header>
 
       <Container>
@@ -32,6 +32,6 @@ export default function ProductPage({ product }: ProductProps) {
       </Container>
 
       <Footer></Footer>
-    </div>
+    </Page>
   );
 }

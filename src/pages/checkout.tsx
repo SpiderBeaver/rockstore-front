@@ -7,6 +7,7 @@ import TextInput from '../components/elements/TextInput';
 import { CartContext } from '../context/CartContext';
 import styles from './checkout.module.css';
 import Footer from '../components/layout/Footer';
+import Page from '../components/layout/Page';
 
 export default function Checkout() {
   const cartContext = useContext(CartContext);
@@ -39,7 +40,7 @@ export default function Checkout() {
   };
 
   return (
-    <div>
+    <Page>
       <Header></Header>
       <Container>
         <h1>Checkout</h1>
@@ -73,6 +74,6 @@ export default function Checkout() {
         </form>
       </Container>
       <Footer></Footer>
-    </div>
+    </Page>
   );
 }

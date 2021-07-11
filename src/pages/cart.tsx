@@ -6,6 +6,7 @@ import CartItemsTable from '../components/cart/CartItemsTable';
 import Container from '../components/layout/Container';
 import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
+import Page from '../components/layout/Page';
 import { CartContext } from '../context/CartContext';
 import { Product } from '../domain/Product';
 
@@ -35,7 +36,7 @@ export default function CartPage() {
     .reduce((a, b) => a + b, 0);
 
   return (
-    <div>
+    <Page>
       <Header></Header>
       <Container>
         <h1>My Cart</h1>
@@ -46,6 +47,6 @@ export default function CartPage() {
         </Link>
       </Container>
       <Footer></Footer>
-    </div>
+    </Page>
   );
 }
