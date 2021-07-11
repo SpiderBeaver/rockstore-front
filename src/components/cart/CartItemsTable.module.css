@@ -8,9 +8,10 @@
 }
 
 .cell {
-  padding: 20px 0;
+  padding: 20px 10px 20px 0;
 }
 
 .lastCell {
   text-align: right;
+  padding-right: 0;
 }
