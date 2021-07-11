@@ -2,7 +2,7 @@
   height: 900px;
   background-image: url('../../../public/hero.jpg');
   background-size: cover;
-  background-position: bottom -60px right 0;
+  background-position: center;
   color: #ffffff;
   padding: 200px 0 100px 0;
   margin-bottom: 60px;
@@ -14,4 +14,28 @@
   display: block;
   max-width: 60%;
   margin-bottom: 200px;
+}
+
+@media screen and (max-width: 992px) {
+  .heroSection {
+    height: auto;
+    padding: 100px 0 100px 0;
+  }
+  .slogan {
+    font-size: 4em;
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .slogan {
+    font-size: 3.5em;
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slogan {
+    font-size: 3em;
+  }
 }
