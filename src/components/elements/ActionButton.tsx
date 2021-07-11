@@ -9,8 +9,9 @@ type ActionButtonProps = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTML
 
 export default function ActionButton({ variant = 'default', ...props }: ActionButtonProps) {
   const className = `${styles.button} ${variant === 'big' ? styles.buttonBig : ''} ${props.className}`;
+  console.log(className);
   return (
-    <button className={className} {...props}>
+    <button {...props} className={className}>
       {props.children}
     </button>
   );

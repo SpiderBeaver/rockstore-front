@@ -8,6 +8,7 @@ import { CartContext } from '../context/CartContext';
 import styles from './checkout.module.css';
 import Footer from '../components/layout/Footer';
 import Page from '../components/layout/Page';
+import ActionButton from '../components/elements/ActionButton';
 
 export default function Checkout() {
   const cartContext = useContext(CartContext);
@@ -43,7 +44,7 @@ export default function Checkout() {
     <Page>
       <Header></Header>
       <Container>
-        <h1>Checkout</h1>
+        <h1 className={styles.heading}>Checkout</h1>
         <form onSubmit={handleSubmit}>
           <TextInput
             label="Name"
@@ -70,7 +71,9 @@ export default function Checkout() {
             onChange={(e) => setEmail(e.target.value)}
           ></TextInput>
 
-          <input type="submit" value="Checkout"></input>
+          <ActionButton type="submit" className={styles.checkoutButton}>
+            Place Order
+          </ActionButton>
         </form>
       </Container>
       <Footer></Footer>
