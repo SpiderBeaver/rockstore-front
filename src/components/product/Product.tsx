@@ -23,6 +23,14 @@ export default function Product({ product }: ProductProps) {
 
   return (
     <div className={styles.product}>
+      <div className={styles.imageContainer}>
+        <Image
+          src={`http://localhost:3001/uploads/${product.pictureFilename}`}
+          alt={`Picture of ${product.name}`}
+          layout="fill"
+          objectFit="contain"
+        ></Image>
+      </div>
       <div className={styles.productInfo}>
         <h1>{product.name}</h1>
         <span>${product.price.toFixed(2)}</span>
@@ -32,14 +40,6 @@ export default function Product({ product }: ProductProps) {
         ) : (
           <ActionButton onClick={handleAddToCart}>Add to cart</ActionButton>
         )}
-      </div>
-      <div className={styles.imageContainer}>
-        <Image
-          src={`http://localhost:3001/uploads/${product.pictureFilename}`}
-          alt={`Picture of ${product.name}`}
-          layout="fill"
-          objectFit="contain"
-        ></Image>
       </div>
     </div>
   );
