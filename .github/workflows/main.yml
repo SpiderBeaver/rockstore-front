@@ -24,6 +24,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: spdrbeaver/rockstore-front
+          tags: spdrbeaver/rockstore-front-rockstore.spiderbeaver.com
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
