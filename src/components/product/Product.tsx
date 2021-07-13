@@ -25,7 +25,7 @@ export default function Product({ product }: ProductProps) {
     <div className={styles.product}>
       <div className={styles.imageContainer}>
         <Image
-          src={`http://localhost:3001/uploads/${product.pictureFilename}`}
+          src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${product.pictureFilename}`}
           alt={`Picture of ${product.name}`}
           layout="fill"
           objectFit="contain"

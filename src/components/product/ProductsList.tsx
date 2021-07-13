@@ -17,7 +17,7 @@ export default function ProductsList({ products }: ProductsListProps) {
             <a className={styles.productCard}>
               <div className={styles.productImageContainer}>
                 <Image
-                  src={`http://localhost:3001/uploads/${product.pictureFilename}`}
+                  src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${product.pictureFilename}`}
                   alt={`Picture of ${product.name}`}
                   width={100}
                   height={100}
