@@ -22,6 +22,8 @@ jobs:
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
+        build-args:
+          - api_url: https://rockstore.spiderbeaver.com
         with:
           push: true
           tags: spdrbeaver/rockstore-front-rockstore.spiderbeaver.com
