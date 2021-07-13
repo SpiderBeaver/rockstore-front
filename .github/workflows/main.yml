@@ -2,7 +2,7 @@ name: Build Docker for rockstore.spiderbeaver.com
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
   workflow_dispatch:
 
@@ -12,6 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: install
+        run: yarn install
 
       - name: build
         run: yarn build
